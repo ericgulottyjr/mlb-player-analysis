@@ -46,4 +46,3 @@ for i in final21["war_labels"].unique():
     players = final21.loc[final21["war_labels"] == i, ["nameFirst","nameLast", "height", "weight", "WAR"]]
     print("Statistics for height, weight, & WAR for cluster {}:".format(i))
     print(players.agg({"height":["min","max","mean"],"weight":["min","max","mean"],"WAR":["min","max","mean"]}))
-
